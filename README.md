@@ -23,4 +23,5 @@ git clone https://github.com/zyb1012132407/JavaWeb_Class_Review.git<br>
 
 ## 友情提示
 
-* 本项目已经修改好Servlet创建模板，省的再添乱七八糟的东西了<br>
+* 本项目已经修改好Servlet模板，省的再添乱七八糟的东西了<br>
+* 如果有不对的地方欢迎提issues<br>
