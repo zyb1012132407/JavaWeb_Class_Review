@@ -16,7 +16,7 @@
 直接下载zip包解压 或者 用git clone下来<br>
 
 ```
-git clone https://github.com/zyb1012132407/JavaWeb_Class_Review.git<br>
+git clone https://github.com/zyb1012132407/JavaWeb_Class_Review.git
 ```
 
 打开Idea直接导入该项目（其他IDE也可以）<br>
