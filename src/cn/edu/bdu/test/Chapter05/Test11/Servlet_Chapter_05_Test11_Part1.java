@@ -1,7 +1,6 @@
-package cn.edu.bdu.test.Chapter05;
+package cn.edu.bdu.test.Chapter05.Test11;
 
-import jdk.nashorn.internal.ir.LiteralNode;
-
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,26 +9,25 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//练习：解决乱码问题
-//对应页码：P137-P140
-@WebServlet(name = "Servlet_Chapter_05_Test2", urlPatterns = {"/Servlet_Chapter_05_Test2"})
-public class Servlet_Chapter_05_Test2 extends HttpServlet {
+//练习：Dispatcher+Include练习
+//对应页码：P166-P167
+@WebServlet(name = "Servlet_Chapter_05_Test11_Part1", urlPatterns = {"/Servlet_Chapter_05_Test11_Part1"})
+public class Servlet_Chapter_05_Test11_Part1 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //设置Response的格式，解决乱码问题
-//        response.setContentType("text/html;charset=utf-8");
+        response.setContentType("text/html;charset=utf-8");
 
-        //另一种解决乱码的问题，相比起来有点臃肿，建议第一种
-        response.setCharacterEncoding("utf-8");
-        response.setHeader("Content-Type","text/html;charset=utf-8");
-
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Servlet_Chapter_05_Test11_Part2");
         //声明一个用于输出的对象
         PrintWriter printWriter = response.getWriter();
         printWriter.println("Test  <br/>");
+        request.setAttribute("Company","传智播客");
+        printWriter.println("before including <br/>");
+        requestDispatcher.include(request,response);
+        printWriter.println("after including <br/>");
 
-        printWriter.println("中国");
-
-        //输出结果为：Test
+        //输出结果为：
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
