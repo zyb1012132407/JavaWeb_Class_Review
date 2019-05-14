@@ -53,7 +53,6 @@ public class IndexServlet extends HttpServlet {
             }
         }
 //        printWriter.println("Type:" + Type + "\n" + "Chapter:" + Chapter + "\n" + "Test:" + Test);
-
 //        System.out.println("Type:" + Type + "\n" + "Chapter:" + Chapter + "\n" + "Test:" + Test);
     }
 
